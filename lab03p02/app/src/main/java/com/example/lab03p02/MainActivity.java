@@ -12,10 +12,13 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     EditText et_dlugosc, et_haslo;
     Button btn_generuj;
+    Random random = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,16 +47,27 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "długośc  8- 20 znaków ", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
                 et_haslo.setText(generuj_haslo(ile));
             }
         });
     }
 
     private String generuj_haslo(int ile) {
-        String literyMale = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        String literyDuze = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        String literyMale = "abcdefghijklmnopqrstuvwxyz";
+        String literyDuze = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String cyfry = "0123456789";
+        String znakiSpecjalne = "!@#$%&";
 
-
-        return "testowe_hasło";
+        StringBuilder haslo = new StringBuilder();
+        for(int i=0; i<ile-3; i++)
+            haslo.append(literyMale.charAt(random.nextInt(literyMale.length())));
+        int poz = random.nextInt(haslo.length());
+        haslo.insert(poz, literyDuze.charAt(random.nextInt(literyDuze.length())));
+        poz = random.nextInt(haslo.length());
+        haslo.insert(poz, cyfry.charAt(random.nextInt(cyfry.length())));
+        poz = random.nextInt(haslo.length());
+        haslo.insert(poz, znakiSpecjalne.charAt(random.nextInt(znakiSpecjalne.length())));
+        return haslo.toString();
     }
 }
