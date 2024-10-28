@@ -50,6 +50,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private String generuj_haslo(int ile) {
+        String literyMale = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        String literyDuze = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+
         return "testowe_hasło";
     }
 }
