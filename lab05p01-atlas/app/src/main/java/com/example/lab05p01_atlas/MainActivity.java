@@ -1,6 +1,7 @@
 package com.example.lab05p01_atlas;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -45,11 +46,29 @@ public class MainActivity extends AppCompatActivity {
         textView_opis = findViewById(R.id.tv_opis);
         btn_next = findViewById(R.id.btn_next);
         btn_back = findViewById(R.id.btn_back);
+        odswierz();
 
+        View.OnClickListener sluchacz = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int id = v.getId();
+                if(id == R.id.btn_next)
+                    pozycja++;
+                else if(id == R.id.btn_back)
+                    pozycja--;
+                if(pozycja <0 ) pozycja=obrazy.length-1;
+                if(pozycja >= obrazy.length) pozycja=0;
+            odswierz();
+            }
+        };
+        btn_next.setOnClickListener(sluchacz);
+        btn_back.setOnClickListener(sluchacz);
+
+    }
+
+    private void odswierz() {
         textView_nazwa.setText(nazwy[pozycja]);
         textView_opis.setText(opisy[pozycja]);
         imageView.setImageResource(obrazy[pozycja]);
-
-
     }
 }

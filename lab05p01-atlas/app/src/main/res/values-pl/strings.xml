@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mushroom atlas</string>
+    <string name="title">Atlas grzybów</string>
+    <string name="next">Następny</string>
+    <string name="back">Poprzedni</string>
+    <string-array name="nazwy">
+        <item>Muchomor czerwony</item>
+        <item>Prawdziwek</item>
+        <item>Maślak</item>
+    </string-array>
+
+    <string-array name="opisy">
+<item>
+Amanita muscaria, powszechnie znany jako muchomor czerwony lub muchomor
+amanita,[5] jest grzybem podstawkowym z rodzaju Amanita. Występuje naturalnie
+w umiarkowanych i borealnych regionach północnej
+</item>
+        <item>Boletus edulis (angielski: cep, penny bun, porcino lub porcini)
+jest grzybem podstawkowym i gatunkiem typowym rodzaju
+Boletus. Szeroko rozpowszechniony na półkuli północnej w
+Europie, Azji i Ameryce Północnej, nie występuje naturalnie na
+półkuli południowej, chociaż został wprowadzony do
+południowej Afryki, Australii, Nowej Zelandii i Brazylii.
+</item>
+        <item>Suillus luteus jest grzybem borowikowym i gatunkiem typowym rodzaju
+Suillus. Grzyb pospolity, pochodzący z całej Eurazji, od
+Irlandii do Korei, został szeroko wprowadzony w innych miejscach,
+w tym w Ameryce Północnej i Południowej, południowej Afryce, Australii
+i Nowej Zelandii.
+</item>
+    </string-array>
+</resources>
